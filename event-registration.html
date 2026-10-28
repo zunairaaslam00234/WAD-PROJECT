@@ -1,96 +1,106 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CampusSphere | Membership</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusSphere | Event Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
 </head>
 <body>
-<header class="site-header">
-  <nav class="navbar container">
-    <a class="logo" href="index.html">Campus<span>Sphere</span></a>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html">Home</a><a href="events.html">Events</a>
-      <a class="active" href="membership.html">Membership</a><a href="admin-login.html">Admin</a>
-    </div>
-  </nav>
-</header>
-
-<main>
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow">BECOME A MEMBER</span>
-      <h1>Your Campus Journey Starts Here</h1>
-      <p>Complete the application form to express your interest in joining CampusSphere.</p>
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="container form-layout">
-      <div class="form-intro">
-        <span class="eyebrow">WHY JOIN US?</span>
-        <h2>Make More of University Life</h2>
-        <p>Connect with students, participate in activities and develop skills outside your regular classes.</p>
-        <ul class="check-list">
-          <li>✓ Discover student activities and workshops</li>
-          <li>✓ Connect with fellow students</li>
-          <li>✓ Participate in campus events</li>
-          <li>✓ Develop teamwork and communication skills</li>
-        </ul>
-        <div class="notice-card"><strong>Before you apply</strong><p>Use your correct student details. Submitting this demo form does not create a saved membership until the PHP/MySQL backend is connected.</p></div>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html">Campus<span>Sphere</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="membership.html" class="active">Membership</a>
+        <a href="admin-login.html">Admin</a>
       </div>
+    </nav>
+  </header>
 
-      <form class="form-card" id="membership-form" action="#" method="post">
-        <h2>Membership Application</h2>
-        <p class="form-subtitle">Fields marked * are required.</p>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Register now</span>
+        <h1>Event Registration</h1>
+        <p>Reserve your place for the activity you want to attend.</p>
+      </div>
+    </section>
 
-        <div class="form-row">
-          <div class="form-group"><label for="full-name">Full Name *</label><input id="full-name" name="full_name" type="text" required maxlength="100" placeholder="Enter your full name"></div>
-          <div class="form-group"><label for="sap-id">Student / SAP ID *</label><input id="sap-id" name="sap_id" type="text" required maxlength="30" placeholder="Enter your student ID"></div>
+    <section class="section section-light">
+      <div class="container form-layout">
+        <div class="form-intro">
+          <span class="eyebrow">Before you continue</span>
+          <h2>Prepare your details</h2>
+          <p>Complete the registration form so the student team can confirm your attendance.</p>
+          <ul class="check-list">
+            <li>✓ Use your correct university information</li>
+            <li>✓ Choose the event you want to join</li>
+            <li>✓ Double-check your contact number</li>
+          </ul>
         </div>
 
-        <div class="form-group"><label for="email">University Email *</label><input id="email" name="email" type="email" required maxlength="150" placeholder="you@university.edu"></div>
-        <div class="form-group"><label for="phone">Phone Number *</label><input id="phone" name="phone" type="tel" required maxlength="25" placeholder="Enter your phone number"></div>
+        <form class="form-card" id="event-registration-form" action="#" method="post" data-demo-form>
+          <h2 id="registration-heading">Register for Campus Hackathon</h2>
+          <p class="form-subtitle">Fields marked * are required.</p>
 
-        <div class="form-row">
-          <div class="form-group"><label for="department">Department *</label>
-            <select id="department" name="department" required>
-              <option value="">Choose department</option>
-              <option>Computer Science</option><option>Software Engineering</option><option>Information Technology</option><option>Electrical Engineering</option><option>Business Administration</option><option>Other</option>
+          <div class="form-group">
+            <label for="registration-event">Select Event *</label>
+            <select id="registration-event" name="event" required>
+              <option value="1">Campus Hackathon</option>
+              <option value="2">Web Design Workshop</option>
+              <option value="3">Career Talk</option>
             </select>
           </div>
-          <div class="form-group"><label for="semester">Semester *</label>
-            <select id="semester" name="semester" required>
-              <option value="">Choose semester</option>
-              <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option>
-            </select>
+
+          <input type="hidden" id="registration-event-id" name="event_id" value="1" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reg-name">Full Name *</label>
+              <input id="reg-name" type="text" required placeholder="Enter your full name" />
+            </div>
+            <div class="form-group">
+              <label for="reg-sap">SAP ID *</label>
+              <input id="reg-sap" type="text" required placeholder="Enter your SAP ID" />
+            </div>
           </div>
-        </div>
 
-        <div class="form-group"><label for="interests">Areas of Interest</label>
-          <select id="interests" name="interests">
-            <option value="">Select an interest</option><option>Technology</option><option>Design</option><option>Event Management</option><option>Marketing</option><option>Community Activities</option>
-          </select>
-        </div>
+          <div class="form-group">
+            <label for="reg-email">University Email *</label>
+            <input id="reg-email" type="email" required placeholder="you@university.edu" />
+          </div>
 
-        <div class="form-group"><label for="reason">Why would you like to join?</label><textarea id="reason" name="reason" rows="4" maxlength="1000" placeholder="Tell us about your interests and goals..."></textarea></div>
+          <div class="form-group">
+            <label for="reg-phone">Phone Number *</label>
+            <input id="reg-phone" type="tel" required placeholder="Enter your phone number" />
+          </div>
 
-        <label class="checkbox-label"><input type="checkbox" id="confirm-details" required> I confirm that the information provided is accurate.</label>
-        <button class="btn btn-primary btn-full" type="submit">Submit Application →</button>
-        <p id="membership-message" class="form-message" aria-live="polite"></p>
-      </form>
+          <button class="btn btn-primary btn-full" type="submit">Complete Registration</button>
+          <p id="registration-message" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="logo footer-logo" href="index.html">Campus<span>Sphere</span></a>
+      <div class="footer-links">
+        <a href="events.html">Events</a>
+        <a href="membership.html">Membership</a>
+        <a href="admin-login.html">Admin</a>
+      </div>
     </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-content"><a class="logo footer-logo" href="index.html">Campus<span>Sphere</span></a><div class="footer-links"><a href="events.html">Events</a><a href="index.html#contact">Contact</a></div></div>
-  <div class="footer-bottom"><p>© 2026 CampusSphere Organization.</p></div>
-</footer>
+    <div class="footer-bottom">
+      <p>© 2026 CampusSphere Organization.</p>
+    </div>
+  </footer>
 </body>
 </html>
