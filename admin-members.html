@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusSphere | Manage Members</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="admin-page">
+<aside class="admin-sidebar">
+  <a class="logo" href="index.html">Campus<span>Sphere</span></a>
+  <p class="sidebar-label">ADMINISTRATION</p>
+  <a class="sidebar-link" href="admin_dashboard.html">▦ Dashboard</a>
+  <a class="sidebar-link active" href="admin-members.html">♙ Members</a>
+  <a class="sidebar-link" href="admin_events.html">▣ Events</a>
+  <a class="sidebar-link" href="admin-registrations.html">☷ Registrations</a>
+  <a class="sidebar-link" href="index.html">↗ Public Website</a>
+  <a class="sidebar-link" href="admin-login.html">⇥ Sign Out</a>
+</aside>
+
+<main class="admin-main">
+  <header class="admin-topbar">
+    <div><span class="eyebrow">MEMBER MANAGEMENT</span><h1>Members</h1><p>Search and review student membership records.</p></div>
+    <a href="membership.html" class="btn btn-primary">View Application Form ↗</a>
+  </header>
+
+  <section class="admin-content">
+    <div class="admin-panel">
+      <div class="panel-heading"><div><h2>Member Directory</h2><p id="member-count">3 sample members</p></div></div>
+      <div class="filter-bar admin-filter">
+        <input type="search" id="member-search" placeholder="Search name, student ID or email..." aria-label="Search members">
+        <select id="member-department-filter" aria-label="Filter department">
+          <option value="">All departments</option>
+          <option>Computer Science</option><option>Software Engineering</option><option>Information Technology</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ID</th><th>Student</th><th>SAP ID</th><th>Email</th><th>Department</th><th>Semester</th><th>Actions</th></tr></thead>
+          <tbody id="admin-members-table">
+            <tr class="admin-member-row" data-department="Computer Science"><td>1</td><td>Ayesha Khan</td><td>60123</td><td>ayesha@example.com</td><td>Computer Science</td><td>5</td><td><button class="table-action edit-member" type="button">Edit</button> <button class="table-action danger delete-member" type="button">Delete</button></td></tr>
+            <tr class="admin-member-row" data-department="Software Engineering"><td>2</td><td>Hamza Raza</td><td>60456</td><td>hamza@example.com</td><td>Software Engineering</td><td>3</td><td><button class="table-action edit-member" type="button">Edit</button> <button class="table-action danger delete-member" type="button">Delete</button></td></tr>
+            <tr class="admin-member-row" data-department="Information Technology"><td>3</td><td>Maryam Siddiqui</td><td>60789</td><td>maryam@example.com</td><td>Information Technology</td><td>7</td><td><button class="table-action edit-member" type="button">Edit</button> <button class="table-action danger delete-member" type="button">Delete</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p id="members-no-results" class="empty-state" hidden>No matching members found.</p>
+      <p id="members-message" class="form-message" aria-live="polite"></p>
+    </div>
+    <p class="demo-notice">Sample records only. Persistent edits and deletions require a PHP endpoint and database.</p>
+  </section>
+</main>
+</body>
+</html>

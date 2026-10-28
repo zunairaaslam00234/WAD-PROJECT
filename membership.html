@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusSphere | Event Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar container">
+    <a class="logo" href="index.html">Campus<span>Sphere</span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a><a class="active" href="events.html">Events</a>
+      <a href="membership.html">Membership</a><a href="admin-login.html">Admin</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">EVENT INFORMATION</span>
+      <h1>Event Details</h1>
+      <p>Everything you need to know before registering.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container detail-layout">
+      <article class="detail-main">
+        <img id="detail-image" class="detail-img" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1100&q=85" alt="Campus event">
+        <span class="event-category" id="detail-category">Technology</span>
+        <h2 id="detail-title">Campus Hackathon</h2>
+        <p id="detail-description">A collaborative coding challenge where students work in teams to develop and present creative solutions.</p>
+        <h3>About this event</h3>
+        <p>Meet other students, exchange ideas and use your skills in a supportive learning environment. Please arrive before the scheduled start time.</p>
+        <a id="register-event-link" class="btn btn-primary" href="event-registration.html?id=1">Register for This Event →</a>
+        <a class="btn btn-outline" href="events.html">Back to Events</a>
+      </article>
+
+      <aside class="detail-sidebar">
+        <h3>Event Information</h3>
+        <div class="detail-info"><span>📅 Date</span><strong id="detail-date">15 November 2026</strong></div>
+        <div class="detail-info"><span>🕘 Time</span><strong id="detail-time">9:00 AM</strong></div>
+        <div class="detail-info"><span>📍 Venue</span><strong id="detail-venue">Computing Lab, Block B</strong></div>
+        <div class="detail-info"><span>🏷 Category</span><strong id="detail-category-side">Technology</strong></div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-content"><a class="logo footer-logo" href="index.html">Campus<span>Sphere</span></a><div class="footer-links"><a href="events.html">Events</a><a href="membership.html">Membership</a></div></div>
+  <div class="footer-bottom"><p>© 2026 CampusSphere Organization.</p></div>
+</footer>
+</body>
+</html>

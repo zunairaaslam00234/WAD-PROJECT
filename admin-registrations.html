@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusSphere | Event Registrations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="admin-page">
+<aside class="admin-sidebar">
+  <a class="logo" href="index.html">Campus<span>Sphere</span></a>
+  <p class="sidebar-label">ADMINISTRATION</p>
+  <a class="sidebar-link" href="admin_dashboard.html">▦ Dashboard</a>
+  <a class="sidebar-link" href="admin-members.html">♙ Members</a>
+  <a class="sidebar-link" href="admin_events.html">▣ Events</a>
+  <a class="sidebar-link active" href="admin-registrations.html">☷ Registrations</a>
+  <a class="sidebar-link" href="index.html">↗ Public Website</a>
+  <a class="sidebar-link" href="admin-login.html">⇥ Sign Out</a>
+</aside>
+
+<main class="admin-main">
+  <header class="admin-topbar">
+    <div><span class="eyebrow">REGISTRATION MANAGEMENT</span><h1>Event Registrations</h1><p>Review the sample student registrations for campus events.</p></div>
+    <a href="events.html" class="btn btn-outline">Browse Events ↗</a>
+  </header>
+
+  <section class="admin-content">
+    <div class="admin-stat-grid">
+      <article class="admin-stat"><span class="stat-symbol">☷</span><p>Total Records Shown</p><h2 id="registration-total">4</h2></article>
+      <article class="admin-stat"><span class="stat-symbol">✓</span><p>Confirmed</p><h2 id="registration-confirmed">3</h2></article>
+      <article class="admin-stat"><span class="stat-symbol">◷</span><p>Pending</p><h2 id="registration-pending">1</h2></article>
+    </div>
+
+    <section class="admin-panel">
+      <div class="panel-heading"><div><h2>Registration Directory</h2><p>Search student details and filter by event or status.</p></div></div>
+      <div class="filter-bar admin-filter">
+        <input type="search" id="registration-search" placeholder="Search student, ID or event..." aria-label="Search registrations">
+        <select id="registration-event-filter" aria-label="Filter by event"><option value="">All events</option><option>Campus Hackathon</option><option>Web Design Workshop</option><option>Career Talk</option></select>
+        <select id="registration-status-filter" aria-label="Filter by status"><option value="">All statuses</option><option>Confirmed</option><option>Pending</option></select>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Reg. ID</th><th>Student</th><th>SAP ID</th><th>Event</th><th>Registration Date</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody id="admin-registrations-table">
+            <tr class="registration-row" data-event="Campus Hackathon" data-status="Confirmed"><td>R001</td><td>Ayesha Khan</td><td>60123</td><td>Campus Hackathon</td><td>2026-10-20</td><td><span class="status-badge">Confirmed</span></td><td><button class="table-action delete-registration" type="button">Remove</button></td></tr>
+            <tr class="registration-row" data-event="Web Design Workshop" data-status="Pending"><td>R002</td><td>Hamza Raza</td><td>60456</td><td>Web Design Workshop</td><td>2026-10-21</td><td><span class="status-badge status-pending">Pending</span></td><td><button class="table-action delete-registration" type="button">Remove</button></td></tr>
+            <tr class="registration-row" data-event="Career Talk" data-status="Confirmed"><td>R003</td><td>Maryam Siddiqui</td><td>60789</td><td>Career Talk</td><td>2026-10-22</td><td><span class="status-badge">Confirmed</span></td><td><button class="table-action delete-registration" type="button">Remove</button></td></tr>
+            <tr class="registration-row" data-event="Campus Hackathon" data-status="Confirmed"><td>R004</td><td>Ali Ahmed</td><td>60999</td><td>Campus Hackathon</td><td>2026-10-23</td><td><span class="status-badge">Confirmed</span></td><td><button class="table-action delete-registration" type="button">Remove</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p id="registrations-empty" class="empty-state" hidden>No matching registrations found.</p>
+      <p id="registrations-message" class="form-message" aria-live="polite"></p>
+    </section>
+    <p class="demo-notice">These are sample registration records. Actual registration lists and status updates must be loaded and saved through PHP/MySQL.</p>
+  </section>
+</main>
+</body>
+</html>
