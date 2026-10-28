@@ -1,105 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CampusSphere | Events</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
 </head>
 <body>
-<header class="site-header">
-  <nav class="navbar container">
-    <a class="logo" href="index.html">Campus<span>Sphere</span></a>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html">Home</a><a class="active" href="events.html">Events</a>
-      <a href="membership.html">Membership</a><a href="admin-login.html">Admin</a>
-    </div>
-  </nav>
-</header>
-
-<main>
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow">DISCOVER • PARTICIPATE • CONNECT</span>
-      <h1>Campus Events</h1>
-      <p>Find workshops, competitions and activities happening in your university community.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Find Your Next Experience</h2>
-        <p>Search events or choose a category to narrow down your options.</p>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html">Campus<span>Sphere</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="events.html">Events</a>
+        <a href="membership.html">Membership</a>
+        <a href="admin-login.html">Admin</a>
       </div>
+    </nav>
+  </header>
 
-      <div class="filter-bar">
-        <input type="search" id="event-search" placeholder="Search events..." aria-label="Search events">
-        <select id="event-category" aria-label="Filter events by category">
-          <option value="">All categories</option>
-          <option value="technology">Technology</option>
-          <option value="workshop">Workshop</option>
-          <option value="career">Career</option>
-        </select>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Discover • Participate • Connect</span>
+        <h1>Campus Events</h1>
+        <p>Find the next workshop, competition, or social activity that matches your interests.</p>
       </div>
+    </section>
 
-      <div class="event-grid" id="events-list">
-        <article class="event-card searchable-event" data-category="technology" data-title="campus hackathon">
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80" alt="Technology hackathon">
-          <div class="event-card-body">
-            <span class="event-category">Technology</span>
-            <h3>Campus Hackathon</h3>
-            <p>A team-based coding challenge focused on creativity and problem-solving.</p>
-            <p class="event-meta">📅 15 Nov 2026 · 9:00 AM<br>📍 Computing Lab, Block B</p>
-            <a class="btn btn-primary" href="event-details.html?id=1">View Details</a>
-          </div>
-        </article>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Find your next experience</h2>
+          <p>Search by name or filter by category to quickly discover events on campus.</p>
+        </div>
 
-        <article class="event-card searchable-event" data-category="workshop" data-title="web design workshop">
-          <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=700&q=80" alt="Web design workshop">
-          <div class="event-card-body">
-            <span class="event-category">Workshop</span>
-            <h3>Web Design Workshop</h3>
-            <p>Explore HTML, CSS and the foundations of attractive web interfaces.</p>
-            <p class="event-meta">📅 22 Nov 2026 · 11:00 AM<br>📍 Seminar Hall</p>
-            <a class="btn btn-primary" href="event-details.html?id=2">View Details</a>
-          </div>
-        </article>
+        <div class="filter-bar">
+          <input type="search" id="event-search" placeholder="Search events..." aria-label="Search events" />
+          <select id="event-category" aria-label="Filter events by category">
+            <option value="">All categories</option>
+            <option value="technology">Technology</option>
+            <option value="workshop">Workshop</option>
+            <option value="career">Career</option>
+          </select>
+        </div>
 
-        <article class="event-card searchable-event" data-category="career" data-title="career talk">
-          <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=700&q=80" alt="Career presentation">
-          <div class="event-card-body">
-            <span class="event-category">Career</span>
-            <h3>Career Talk</h3>
-            <p>Learn about professional skills, career pathways and opportunities.</p>
-            <p class="event-meta">📅 05 Dec 2026 · 12:00 PM<br>📍 Auditorium</p>
-            <a class="btn btn-primary" href="event-details.html?id=3">View Details</a>
-          </div>
-        </article>
+        <div class="event-grid" id="events-list">
+          <article class="event-card searchable-event" data-category="technology" data-title="campus hackathon">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80" alt="Technology hackathon" />
+            <div class="event-card-body">
+              <span class="event-category">Technology</span>
+              <h3>Campus Hackathon</h3>
+              <p>A team-based coding challenge focused on creativity and problem-solving.</p>
+              <p class="event-meta">📅 15 Nov 2026 · 9:00 AM<br>📍 Computing Lab, Block B</p>
+              <a class="btn btn-primary" href="event-details.html?id=1">View Details</a>
+            </div>
+          </article>
+
+          <article class="event-card searchable-event" data-category="workshop" data-title="web design workshop">
+            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=700&q=80" alt="Web design workshop" />
+            <div class="event-card-body">
+              <span class="event-category">Workshop</span>
+              <h3>Web Design Workshop</h3>
+              <p>Explore visual design, layout, and the basics of building better interfaces.</p>
+              <p class="event-meta">📅 22 Nov 2026 · 11:00 AM<br>📍 Seminar Hall</p>
+              <a class="btn btn-primary" href="event-details.html?id=2">View Details</a>
+            </div>
+          </article>
+
+          <article class="event-card searchable-event" data-category="career" data-title="career talk">
+            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=700&q=80" alt="Career presentation" />
+            <div class="event-card-body">
+              <span class="event-category">Career</span>
+              <h3>Career Talk</h3>
+              <p>Learn about future opportunities, soft skills, and career development.</p>
+              <p class="event-meta">📅 05 Dec 2026 · 12:00 PM<br>📍 Auditorium</p>
+              <a class="btn btn-primary" href="event-details.html?id=3">View Details</a>
+            </div>
+          </article>
+        </div>
 
         <p id="events-empty" class="empty-state" hidden>No events match your search.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="join-section">
-    <div class="container join-content">
-      <div><h2>Want to participate?</h2><p>Complete your membership application to get involved in campus activities.</p></div>
-      <a href="membership.html" class="btn btn-white">Apply for Membership →</a>
-    </div>
-  </section>
-</main>
+    <section class="join-section">
+      <div class="container join-content">
+        <div>
+          <h2>Want to participate?</h2>
+          <p>Apply for membership and get access to exciting campus experiences.</p>
+        </div>
+        <a href="membership.html" class="btn btn-white">Apply for Membership</a>
+      </div>
+    </section>
+  </main>
 
-<footer class="site-footer">
-  <div class="container footer-content">
-    <a class="logo footer-logo" href="index.html">Campus<span>Sphere</span></a>
-    <div class="footer-links"><a href="index.html">Home</a><a href="membership.html">Membership</a><a href="admin-login.html">Admin</a></div>
-  </div>
-  <div class="footer-bottom"><p>© 2026 CampusSphere Organization.</p></div>
-</footer>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="logo footer-logo" href="index.html">Campus<span>Sphere</span></a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="membership.html">Membership</a>
+        <a href="admin-login.html">Admin</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CampusSphere Organization.</p>
+    </div>
+  </footer>
 </body>
 </html>
